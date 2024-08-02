@@ -24,5 +24,6 @@ if (! defined('ABSPATH')) {
 function create_block_wp_performance_blocks_block_init()
 {
     register_block_type(__DIR__.'/build/links-credit');
+    register_block_type(__DIR__.'/build/github-infos');
 }
 add_action('init', 'create_block_wp_performance_blocks_block_init');

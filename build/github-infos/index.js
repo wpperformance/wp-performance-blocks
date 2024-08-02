@@ -1,0 +1,1 @@
+(()=>{"use strict";const e=window.wp.blocks,o=window.React,t=window.wp.blockEditor,i=JSON.parse('{"UU":"wp-performance/github-infos"}');(0,e.registerBlockType)(i.UU,{edit:function(){return(0,o.createElement)("p",{...(0,t.useBlockProps)()},"Github Infos")}})})();

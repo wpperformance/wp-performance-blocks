@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "wp-performance/github-infos",
+  "version": "0.1.0",
+  "title": "Github Infos",
+  "category": "theme",
+  "icon": "admin-site",
+  "description": "Display Github infos for PressWind",
+  "example": {},
+  "supports": {
+    "html": false,
+    "interactivity": true
+  },
+  "textdomain": "github-infos",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "viewScriptModule": "file:./view.js"
+}
