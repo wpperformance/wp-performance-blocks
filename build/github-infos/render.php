@@ -5,6 +5,17 @@ if (false === ($transient = get_transient('github_data'))) {
 
     $response = wp_remote_get('https://api.github.com/repos/WP-Performance/press-wind/tags');
     $githubZip = wp_remote_retrieve_body($response);
+    try {
+        $githubData = json_decode($githubData);
+        $githubZip = json_decode($githubZip);
+    } catch (Exception $e) {
+        $githubData = [];
+        $githubZip = [];
+        // Log the error.
+        error_log($e->getMessage());
+    }
+
+    $githubZip = count($githubZip) > 0 ? $githubZip[0] : null;
 
     $transient = [
         'githubData' => $githubData,
