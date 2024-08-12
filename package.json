@@ -18,6 +18,7 @@
 		"@wordpress/scripts": "^27.9.0"
 	},
 	"dependencies": {
-		"@wordpress/interactivity": "^6.4.0"
+		"@wordpress/interactivity": "^6.4.0",
+		"throttle-debounce": "^5.0.2"
 	}
 }
