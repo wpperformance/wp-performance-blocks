@@ -49,5 +49,6 @@ wp_interactivity_state('wp-performance/search', [
 				<div data-wp-bind--hidden="state.hasResults"><?php _e('no result', 'search-box'); ?></div>
 			</div>
 		</div>
+		<div class="perf-search-mask" data-wp-on--click="actions.openSearch"></div>
 	</div>
 </div>

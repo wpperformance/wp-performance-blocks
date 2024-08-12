@@ -209,13 +209,13 @@ const { state, actions } = store(
 					state.hasSearch = false;
 					return;
 				}
-				const data = await search(
-					state.search_url,
-					state.index_name,
-					state.search_key,
-					state.q,
-					state.filters,
-				);
+				const data = await search({
+					url: state.search_url,
+					index: state.index_name,
+					token: state.search_key,
+					query: state.q,
+					filters: state.filters,
+				});
 				state.index = -1;
 				state.hasSearch = true;
 				state.results = data.hits;
