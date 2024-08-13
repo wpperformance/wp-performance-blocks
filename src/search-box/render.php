@@ -28,7 +28,7 @@ wp_interactivity_state('wp-performance/search', [
 		</button>
 		<div class="wperf-search-box_container">
 			<input type="search" class="wpref-input-search" data-wp-on--input="actions.search" placeholder="<?php _e('Search', 'search-box'); ?>" />
-			<div class="wpref-search-facets">
+			<div class="wpref-search-facets" data-wp-bind--hidden="!state.hasFacet">
 				<template data-wp-each="state.facets">
 					<template data-wp-each--facet="context.item.value" data-wp-key="context.item.key">
 						<label data-wp-key="context.item.key">

@@ -81,6 +81,9 @@ const { state, actions } = store(
 			results: [],
 			facets: [],
 			filters: [],
+			get hasFacet() {
+				return state.facets.length > 0;
+			},
 			// for display no results message
 			get hasResults() {
 				return (
@@ -157,6 +160,7 @@ const { state, actions } = store(
 				if (e.key === "ArrowUp") {
 					e.preventDefault();
 					if (state.selected <= 0) {
+						state.selected = -1;
 						return input.focus();
 					}
 					state.selected--;

@@ -6,11 +6,12 @@
 }
 
 /** close button */
-.wperf-search-box_close {
+.wperf-search-box_content button.wperf-search-box_close {
 	position: absolute;
 	top: 1.5rem;
-	right: 1rem;
+	right: 2rem;
 	color: #FFF;
+	z-index: 9999;
 }
 
 .wperf-search-box_content[open] {
@@ -33,7 +34,7 @@
 	z-index: 9998;
 	width: 100vw;
 	height: 100vh;
-	background-color: rgba(1, 1, 1, 0.5);
+	background-color: rgba(1, 1, 1, 0.7);
 }
 
 
@@ -45,10 +46,10 @@
 	justify-content: flex-start;
 	width: 100%;
 	max-width: 64rem;
-	height: 80vh;
-	padding: 1.5rem;
+	max-height: 80vh;
+	// padding: 1.5rem;
 	background-color: #fff;
-	box-shadow: 0px 0px 10px 0 #666;
+	box-shadow: 0px 0px 10px 0 #000;
 	border-radius: .3rem;
 	z-index: 9999;
 }
@@ -66,11 +67,12 @@
 
 .wperf-search-box_container input[type="search"] {
 	width: 100%;
-	padding: 0.7rem;
+	padding: 1.3rem 1rem;
 	border-radius: .3rem;
-	border: 1px solid #999;
+	border: 0;
+	outline: none;
 	// border: none;
-	font-size: 1rem;
+	font-size: 1.1rem;
 	// box-shadow: 0px 0px 3px 0 #666;
 }
 
@@ -78,12 +80,17 @@
 /** facets */
 
 .wpref-search-facets {
+	width: calc(100% - 1rem);
+	border-top: 1px solid #999;
 	display: flex;
 	flex-wrap: wrap;
 	gap: 1rem;
 	padding: 1rem .5rem;
 }
 
+.wpref-search-facets[hidden] {
+	display: none;
+}
 
 .wpref-search-facets label {
 	display: flex;
@@ -136,14 +143,14 @@
 	--scrollbar-width: thin;
 	--scrollbar-color: var(--scrollbar-thumb, initial) var(--scrollbar-track, initial);
 	--scrollbar-track: transparent;
-	--scrollbar-thumb: #e5e7eb;
+	--scrollbar-thumb: #a9a9a9;
 	--scrollbar-thumb-radius: 0.25rem;
 	overflow-y: auto;
 }
 
 .wperf-search-box_container .wpref-search-results::-webkit-scrollbar {
 	display: block;
-	width: 8px;
+	width: 6px;
 	height: 8px;
 }
 
@@ -170,15 +177,18 @@
 .wpref-search-results a {
 	display: block;
 	padding: 0 1rem;
-	border-top: .5px transparent dotted;
-	border-bottom: .5px transparent dotted;
+	// border-top: .5px transparent dotted;
+	// border-bottom: .5px transparent dotted;
 }
 
-.wpref-search-results a:hover,
-.wpref-search-results a:focus {
+.wpref-search-results a:focus h3 {
+	color: var(--wp--preset--color--accent);
+}
+
+.wpref-search-results a:hover {
 	background-color: #f9f9f9;
 	outline: none;
-	border-top: .5px var(--wp--preset--color--accent) dotted;
-	border-bottom: .5px var(--wp--preset--color--accent) dotted;
+	// border-top: .5px var(--wp--preset--color--accent) dotted;
+	// border-bottom: .5px var(--wp--preset--color--accent) dotted;
 
 }
