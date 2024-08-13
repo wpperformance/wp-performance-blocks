@@ -15,7 +15,9 @@ if (false === ($transient = get_transient('github_data'))) {
         error_log($e->getMessage());
     }
 
-    $githubZip = count($githubZip) > 0 ? $githubZip[0] : null;
+    if ($githubZip) {
+        $githubZip = count($githubZip) > 0 ? $githubZip[0] : null;
+    }
 
     $transient = [
         'githubData' => $githubData,
@@ -33,7 +35,7 @@ wp_interactivity_state('wp-performance/global', [
 ]);
 ?>
 <div class="wp-block-group gm-github-infos is-layout-flex wp-block-group-is-layout-flex"
-	 data-wp-interactive="wp-performance/global">
+	data-wp-interactive="wp-performance/global">
 	<p>
 		<a class="gm-star" data-wp-text="state.stargazer" data-wp-bind--href="state.repoUrl" target="_blank"></a>
 		<a download="" class="gm-zip" data-wp-text="state.zipText"

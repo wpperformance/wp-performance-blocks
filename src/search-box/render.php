@@ -18,7 +18,7 @@ wp_interactivity_state('wp-performance/search', [
 			<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"></path>
 		</svg>
 	</button>
-	<div data-wp-bind--hidden="!state.open" class="wperf-search-box_content">
+	<dialog data-wp-bind--open="state.open" class="wperf-search-box_content">
 		<button class="wperf-search-box_close" data-wp-on--click="actions.openSearch"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
 				<title>
 					</php _e('Close', 'search-box' ); ?>
@@ -50,5 +50,5 @@ wp_interactivity_state('wp-performance/search', [
 			</div>
 		</div>
 		<div class="perf-search-mask" data-wp-on--click="actions.openSearch"></div>
-	</div>
+	</dialog>
 </div>
