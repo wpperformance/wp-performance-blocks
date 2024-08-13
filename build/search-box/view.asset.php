@@ -1,3 +1,3 @@
 <?php
 
-return ['dependencies' => ['@wordpress/interactivity'], 'version' => 'c7f624359f7f113347af', 'type' => 'module'];
+return ['dependencies' => ['@wordpress/interactivity'], 'version' => '0c5df78a915bfd3ad9b4', 'type' => 'module'];

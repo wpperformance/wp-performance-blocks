@@ -60,7 +60,7 @@
 	}
 
 	.wperf-search-box_container {
-		max-width: calc(90vw - 3rem);
+		max-width: 90vw;
 	}
 }
 
@@ -146,6 +146,7 @@
 	--scrollbar-thumb: #a9a9a9;
 	--scrollbar-thumb-radius: 0.25rem;
 	overflow-y: auto;
+	border-top: 1px solid #999;
 }
 
 .wperf-search-box_container .wpref-search-results::-webkit-scrollbar {

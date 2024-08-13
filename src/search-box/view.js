@@ -82,7 +82,8 @@ const { state, actions } = store(
 			facets: [],
 			filters: [],
 			get hasFacet() {
-				return state.facets.length > 0;
+				// return state.facets.length > 0;
+				return false;
 			},
 			// for display no results message
 			get hasResults() {
