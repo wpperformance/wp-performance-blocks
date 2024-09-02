@@ -11,8 +11,6 @@ type PlayerContext = {
 	currentTime: number;
 }
 
-
-
 /**
  * update current time
  * @param {*} event
@@ -45,8 +43,11 @@ const usePlayer = () => {
 			const parent = videoPlayer.ref?.parentNode;
 			if (parent) {
 				await splitTask();
-				player.current = new Plyr(parent as HTMLElement, {});
+				player.current = new Plyr(parent as HTMLElement, {
+					loop: { active: false }
+				});
 				player.current.on("timeupdate", (e) => updateTime(e, context));
+				player.current.on("ended", () => actions.ended());
 				// set current time for this video
 				player.current.on('ready', () => {
 					if (player.current) {
@@ -70,7 +71,7 @@ const usePlayer = () => {
 
 
 
-const { state } = store("wp-performance/training", {
+const { actions } = store("wp-performance/training", {
 	state: {
 		get completeUrl() {
 			const context = getContext<PlayerContext>();
@@ -85,5 +86,11 @@ const { state } = store("wp-performance/training", {
 		initPlayer() {
 			usePlayer();
 		},
+		ended() {
+			console.log("ended");
+			const context = getContext<PlayerContext>();
+			context.currentTime = 0;
+			saveToLocalStorage(0, context);
+		}
 	},
 });
