@@ -1,0 +1,22 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "wp-performance/youtube-plyr",
+  "version": "0.1.0",
+  "title": "Youtube Plyr",
+  "category": "widgets",
+  "icon": "youtube",
+  "description": "Show Youtube video with plyr player",
+  "example": {},
+  "supports": {
+    "html": false,
+    "align": true,
+    "interactivity": true
+  },
+  "textdomain": "youtube-plyr",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "viewScriptModule": "file:./view.js"
+}

@@ -12,10 +12,10 @@
  * Text Domain:       wp-performance
  */
 if (! defined('ABSPATH')) {
-    exit; // Exit if accessed directly.
+	exit; // Exit if accessed directly.
 }
 
-require_once __DIR__.'/inc/search.php';
+require_once __DIR__ . '/inc/search.php';
 
 /**
  * Registers the block using the metadata loaded from the `block.json` file.
@@ -26,8 +26,10 @@ require_once __DIR__.'/inc/search.php';
  */
 function create_block_wp_performance_blocks_block_init()
 {
-    register_block_type(__DIR__.'/build/links-credit');
-    register_block_type(__DIR__.'/build/github-infos');
-    register_block_type(__DIR__.'/build/search-box');
+	register_block_type(__DIR__ . '/build/links-credit');
+	register_block_type(__DIR__ . '/build/github-infos');
+	register_block_type(__DIR__ . '/build/search-box');
+	register_block_type(__DIR__ . '/build/youtube-plyr');
+	register_block_type(__DIR__ . '/build/training-nav');
 }
 add_action('init', 'create_block_wp_performance_blocks_block_init');
