@@ -1,10 +1,11 @@
 <?php
 global $post;
 
-$video_url = get_post_meta(get_the_ID(), 'wpp_video_url', true);
+$video_url = get_post_meta(get_the_ID(), 'video_url', true);
 
 $context = [
 	'videoUrl' => $video_url,
+	'postId' => get_the_ID(),
 ];
 
 ?>

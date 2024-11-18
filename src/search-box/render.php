@@ -1,8 +1,8 @@
 <?php
 wp_interactivity_state('wp-performance/search', [
-    'search_url' => MEILISEARCH_URL,
-    'search_key' => MEILISEARCH_KEY_SECRET,
-    'index_name' => WPPerformance\Search\wp_perf_search_index_name(),
+	'search_url' => MEILISEARCH_URL,
+	'search_key' => MEILISEARCH_KEY_SECRET,
+	'index_name' => WPPerformance\Search\wp_perf_search_index_name(),
 ]);
 
 ?>

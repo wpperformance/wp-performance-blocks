@@ -13,7 +13,9 @@ const { directive } = privateApis(
 );
 
 directive("html", ({ directives: { html }, element, evaluate }) => {
-	const entry = html.find(({ suffix }) => suffix === "default");
+	const entry = html.length > 0 ? html[0] : null;
+	// 18 november 2024, suffix default is not working anymore
+	// const entry = html.find(({ suffix }) => suffix === "default");
 	if (!entry) {
 		element.props.children = null;
 		return;
